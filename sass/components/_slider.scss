@@ -1,0 +1,11 @@
+.slider {
+  &__img {
+    height: 100%;
+    text-align: center;
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,15 @@
+.app-button {
+  & > *:first-child {
+    margin-right: 2rem;
+    transform: translateY(-3px);
+  }
+  &__ios,
+  &__android {
+    height: 5rem;
+    display: inline-block;
+    img {
+      height: 100%;
+      display: inline-block;
+    }
+  }
+}

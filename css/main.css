@@ -152,6 +152,8 @@ body {
 .heading-tertiary {
   font-size: 3.2rem;
   line-height: 1.35;
+  font-weight: 300;
+  color: #8a8a8a;
 }
 
 .heading-tertiary--indicator {
@@ -181,8 +183,36 @@ body {
   margin-bottom: 10rem;
 }
 
+.app-button > *:first-child {
+  margin-right: 2rem;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.app-button__ios, .app-button__android {
+  height: 5rem;
+  display: inline-block;
+}
+
+.app-button__ios img, .app-button__android img {
+  height: 100%;
+  display: inline-block;
+}
+
+.slider__img {
+  height: 100%;
+  text-align: center;
+}
+
+.slider__text {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .header {
-  height: 10rem;
+  height: 9rem;
 }
 
 .header__content {
@@ -204,7 +234,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.6rem 0;
+  padding: 1rem 0;
 }
 
 .header__logo-img {
@@ -241,5 +271,12 @@ body {
   .header__logo-text {
     font-size: 3.5rem;
   }
+}
+
+.section-slider {
+  overflow: hidden;
+  background-color: #dadada;
+  height: calc(100vh - 9rem);
+  position: relative;
 }
 /*# sourceMappingURL=main.css.map */
