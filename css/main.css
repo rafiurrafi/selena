@@ -40,6 +40,60 @@
   font-weight: 900;
 }
 
+.header__main-nav ul, .header__side-nav ul {
+  list-style: none;
+}
+
+.header__main-nav ul li, .header__side-nav ul li {
+  display: inline-block;
+}
+
+.header__main-nav ul li:not(:first-child), .header__side-nav ul li:not(:first-child) {
+  margin-left: 2.5rem;
+}
+
+.header__main-nav ul li a:link, .header__side-nav ul li a:link, .header__main-nav ul li a:visited, .header__side-nav ul li a:visited {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.header__main-nav ul li a:hover, .header__side-nav ul li a:hover {
+  position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.header__main-nav ul li a:hover::after, .header__side-nav ul li a:hover::after {
+  content: "";
+  display: inline-block;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  background-color: #ff5850;
+  position: absolute;
+  right: -1rem;
+  bottom: 0.5rem;
+}
+
+.header__main-nav ul li a.active, .header__side-nav ul li a.active {
+  position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.header__main-nav ul li a.active::after, .header__side-nav ul li a.active::after {
+  content: "";
+  display: inline-block;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  background-color: #ff5850;
+  position: absolute;
+  right: -1rem;
+  bottom: 0.5rem;
+}
+
 /*Media query manager*/
 *,
 *::before,
@@ -95,18 +149,6 @@ body {
   color: #1a1a1a;
 }
 
-.heading-secondary::after {
-  content: "";
-  height: 5px;
-  width: 5px;
-  display: inline-block;
-  background-color: #ff5850;
-}
-
-.heading-secondary::after {
-  margin-left: 3px;
-}
-
 .heading-tertiary {
   font-size: 3.2rem;
   line-height: 1.35;
@@ -114,18 +156,6 @@ body {
 
 .heading-tertiary--indicator {
   position: relative;
-}
-
-.heading-tertiary--indicator::after {
-  content: "";
-  height: 5px;
-  width: 5px;
-  display: inline-block;
-  background-color: #ff5850;
-}
-
-.heading-tertiary--indicator::after {
-  margin-left: 3px;
 }
 
 .heading-tetra {
@@ -149,5 +179,67 @@ body {
 
 .u-mb-xl {
   margin-bottom: 10rem;
+}
+
+.header {
+  height: 10rem;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.6rem 0;
+}
+
+.header__logo-img {
+  height: 7rem;
+  width: 7rem;
+  margin-right: 0.5rem;
+}
+
+.header__logo-text {
+  font-size: 4.7rem;
+  font-weight: 700;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.header__logo-text::after {
+  content: "";
+  display: inline-block;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  background-color: #ff5850;
+  position: absolute;
+  right: -1rem;
+  bottom: 0.5rem;
+}
+
+.header__logo-text::after {
+  bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .header__logo-text {
+    font-size: 3.5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

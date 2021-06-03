@@ -1,3 +1,45 @@
+@mixin red-indicator {
+  position: relative;
+  transition: all 0.4s;
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 0.7rem;
+    width: 0.7rem;
+    border-radius: 50%;
+    background-color: $color-primary;
+    position: absolute;
+    right: -1rem;
+    bottom: 0.5rem;
+  }
+}
+
+%nav-style {
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      &:not(:first-child) {
+        margin-left: 2.5rem;
+      }
+      a {
+        &:link,
+        &:visited {
+          text-decoration: none;
+          color: $gray-5;
+          font-weight: 500;
+        }
+        &:hover {
+          @include red-indicator();
+        }
+        &.active {
+          @include red-indicator();
+        }
+      }
+    }
+  }
+}
+
 @mixin truncate-text($length) {
   width: $length;
   white-space: nowrap;

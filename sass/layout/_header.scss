@@ -1,0 +1,35 @@
+.header {
+  height: 10rem;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    padding: 1.6rem 0;
+    &-img {
+      height: 7rem;
+      width: 7rem;
+      margin-right: 0.5rem;
+    }
+    &-text {
+      font-size: 4.7rem;
+      font-weight: 700;
+      @include red-indicator;
+      &::after {
+        bottom: 2rem;
+      }
+      @include respond(tab-port) {
+        font-size: 3.5rem;
+      }
+    }
+  }
+  &__main-nav {
+    @extend %nav-style;
+  }
+  &__side-nav {
+    @extend %nav-style;
+  }
+}
