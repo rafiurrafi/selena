@@ -398,7 +398,56 @@ body {
 }
 
 .section-album,
-.section-music {
+.section-music,
+.section-tours {
   padding: 10rem 0;
+}
+
+.tour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tour:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.tour--faded {
+  color: #8a8a8a;
+}
+
+.tour__ticket-sold {
+  color: #ff5850;
+}
+
+.tour__date {
+  font-size: 4.8rem;
+  font-weight: 400;
+  margin-right: 4rem;
+}
+
+.tour__day {
+  margin-right: 9rem;
+}
+
+.tour__name {
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.tour__action {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.tour__action i {
+  margin-left: 2rem;
+  color: #ff5850;
 }
 /*# sourceMappingURL=main.css.map */
