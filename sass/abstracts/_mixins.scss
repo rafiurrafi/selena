@@ -1,0 +1,35 @@
+@mixin truncate-text($length) {
+  width: $length;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*Media query manager*/
+// 0 - 600px       phone
+// 600 - 900       Table portrate
+// 900 - 1200      Table Landscape
+// 1200 - 1800     normal style
+
+// Breakpoint argument
+// phone
+// tab-port
+// tab-land
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}

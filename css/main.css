@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "poppins";
+  src: url(../../fonts/Poppins-Light.ttf);
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url(../../fonts/Poppins-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url(../../fonts/Poppins-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url(../../fonts/Poppins-SemiBold.ttf);
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url(../../fonts/Poppins-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url(../../fonts/Poppins-ExtraBold.ttf);
+  font-style: normal;
+  font-weight: 900;
+}
+
+/*Media query manager*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "poppins";
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  color: #000;
+  line-height: 1.6;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.heading-primary {
+  font-size: 6rem;
+  line-height: 1.125;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.heading-secondary {
+  font-size: 4.8rem;
+  line-height: 1.15;
+  color: #1a1a1a;
+}
+
+.heading-secondary::after {
+  content: "";
+  height: 5px;
+  width: 5px;
+  display: inline-block;
+  background-color: #ff5850;
+}
+
+.heading-secondary::after {
+  margin-left: 3px;
+}
+
+.heading-tertiary {
+  font-size: 3.2rem;
+  line-height: 1.35;
+}
+
+.heading-tertiary--indicator {
+  position: relative;
+}
+
+.heading-tertiary--indicator::after {
+  content: "";
+  height: 5px;
+  width: 5px;
+  display: inline-block;
+  background-color: #ff5850;
+}
+
+.heading-tertiary--indicator::after {
+  margin-left: 3px;
+}
+
+.heading-tetra {
+  font-size: 2.4rem;
+  line-height: 1.375;
+  font-weight: 300;
+  color: #8a8a8a;
+}
+
+.u-mb-sm {
+  margin-bottom: 2rem;
+}
+
+.u-mb-md {
+  margin-bottom: 3rem;
+}
+
+.u-mb-lg {
+  margin-bottom: 8rem;
+}
+
+.u-mb-xl {
+  margin-bottom: 10rem;
+}
+/*# sourceMappingURL=main.css.map */
