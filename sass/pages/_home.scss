@@ -3,4 +3,9 @@
   background-color: $gray-2;
   height: calc(100vh - 9rem);
   position: relative;
+  margin-bottom: 10rem;
+}
+.section-album,
+.section-music {
+  padding: 10rem 0;
 }

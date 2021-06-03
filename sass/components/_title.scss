@@ -1,0 +1,14 @@
+.title {
+  &--train {
+    display: flex;
+  }
+  &--train &__text {
+    margin-left: 3rem;
+  }
+  &__text {
+    font-style: 1.6rem;
+    font-weight: 600;
+    color: $gray-3;
+    @include underscore;
+  }
+}
