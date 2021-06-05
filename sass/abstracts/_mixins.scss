@@ -26,6 +26,20 @@
     right: -9.5rem;
   }
 }
+@mixin underscore-before {
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 8rem;
+    background-color: $gray-5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
 %nav-style {
   ul {
     list-style: none;

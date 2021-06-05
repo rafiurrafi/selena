@@ -1,0 +1,31 @@
+.section-about-testimonial {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rem 0;
+  @include respond(tab-port) {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.about__for-you {
+  flex: 45%;
+  margin-right: 10%;
+  @include respond(tab-port) {
+    margin-bottom: 8rem;
+  }
+}
+.about__testimonial {
+  flex: 45%;
+  blockquote {
+    &:not(:last-of-type) {
+      margin-bottom: 4rem;
+    }
+    cite {
+      padding-left: 8.5rem;
+      margin-top: 1rem;
+      display: block;
+      @include underscore-before;
+    }
+  }
+}

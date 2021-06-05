@@ -816,6 +816,67 @@ body {
   }
 }
 
+.section-about-testimonial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10rem 0;
+}
+
+@media (max-width: 56.25em) {
+  .section-about-testimonial {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.about__for-you {
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+  margin-right: 10%;
+}
+
+@media (max-width: 56.25em) {
+  .about__for-you {
+    margin-bottom: 8rem;
+  }
+}
+
+.about__testimonial {
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+}
+
+.about__testimonial blockquote:not(:last-of-type) {
+  margin-bottom: 4rem;
+}
+
+.about__testimonial blockquote cite {
+  padding-left: 8.5rem;
+  margin-top: 1rem;
+  display: block;
+  position: relative;
+}
+
+.about__testimonial blockquote cite::after {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 8rem;
+  background-color: #1a1a1a;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+
 .contact-parallex {
   background-image: url(../../img/Extra/hero-slide-2-concert.png);
 }
