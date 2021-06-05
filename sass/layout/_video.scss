@@ -1,0 +1,18 @@
+.video {
+  position: relative;
+  cursor: pointer;
+  height: 40vw;
+  &__img-1 {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+  }
+  &__img-2 {
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

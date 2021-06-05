@@ -15,7 +15,7 @@
       margin-right: 0.5rem;
     }
     &-text {
-      font-size: 4.7rem;
+      font-size: 4rem;
       font-weight: 700;
       @include red-indicator;
       &::after {
@@ -28,6 +28,9 @@
   }
   &__main-nav {
     @extend %nav-style;
+    @include respond(tab-port) {
+      display: none;
+    }
   }
   &__side-nav {
     @extend %nav-style;

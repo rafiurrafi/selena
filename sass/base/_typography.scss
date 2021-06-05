@@ -8,6 +8,10 @@
   font-size: 4.8rem;
   line-height: 1.15;
   color: $gray-5;
+  @include red-indicator;
+  &::after {
+    bottom: 1.2rem;
+  }
 }
 .heading-tertiary {
   font-size: 3.2rem;
@@ -15,7 +19,7 @@
   font-weight: 300;
   color: $gray-3;
   &--indicator {
-    position: relative;
+    @include red-indicator;
   }
 }
 .heading-tetra {
@@ -23,4 +27,8 @@
   line-height: 1.375;
   font-weight: 300;
   color: $gray-3;
+  &--footer {
+    color: $gray-1;
+    font-weight: 600;
+  }
 }

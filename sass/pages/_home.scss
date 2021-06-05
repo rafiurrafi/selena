@@ -7,6 +7,11 @@
 }
 .section-album,
 .section-music,
-.section-tours {
+.section-tours,
+.section-video,
+.section-merch {
   padding: 10rem 0;
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
 }

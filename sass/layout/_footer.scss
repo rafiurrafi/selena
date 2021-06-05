@@ -1,0 +1,134 @@
+.footer {
+  background-color: rgba($color-dark, 0.95);
+  color: $gray-1;
+  font-size: 1.6rem;
+  padding: 10rem 0;
+  overflow: hidden;
+  position: relative;
+  @include respond(tab-land) {
+    padding: 8rem 2rem;
+  }
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    @include respond(tab-port) {
+      display: block;
+      width: 70%;
+      margin: 0 auto;
+      & > * {
+        margin-bottom: 4rem;
+      }
+    }
+    &-left {
+      flex: 30%;
+      margin-right: 15%;
+    }
+    &-middle {
+      flex: 20%;
+    }
+    &-right {
+      flex: 25%;
+      input {
+        width: 100%;
+        padding: 1rem 2rem;
+        border: none;
+        font-size: 2rem;
+        @include respond(tab-port) {
+          border-bottom: 1px solid $gray-1;
+          background-color: transparent;
+          margin-bottom: 2rem;
+        }
+      }
+      button {
+        margin-left: auto;
+        display: block;
+        outline: none;
+        border: none;
+        padding: 1.5rem 3rem;
+        background-color: $gray-1;
+        color: $gray-5;
+        font-size: 1.8rem;
+        margin-top: 1rem;
+      }
+    }
+    &-nav {
+      ul {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: $gray-1;
+          margin-bottom: 1rem;
+          display: inline-block;
+          &:hover {
+            @include red-indicator;
+          }
+        }
+      }
+    }
+    &-contact {
+      margin-bottom: 1.5rem;
+      i {
+        font-size: 1.6rem;
+        margin-right: 2rem;
+      }
+    }
+  }
+  &__bottom {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 10rem;
+      & > * {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &::after {
+    content: "Selena.";
+    font-size: 32rem;
+    font-weight: 900;
+    position: absolute;
+    z-index: 1;
+    line-height: 1;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    // width: 100%;
+    color: $gray-1;
+    opacity: 0.15;
+
+    @include respond(tab-land) {
+      font-size: 27rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 23rem;
+    }
+    @include respond(phone) {
+      font-size: 15rem;
+      transform: translateX(-10rem) rotate(90deg);
+      left: -40%;
+      top: 0;
+    }
+  }
+}
+.logo-text__footer {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: $gray-1;
+  display: inline-block;
+  @include red-indicator;
+  &::after {
+    bottom: 0.5rem;
+  }
+}

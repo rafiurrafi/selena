@@ -1,0 +1,9 @@
+.socials {
+  a {
+    text-decoration: none;
+    color: $gray-1;
+    &:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+  }
+}

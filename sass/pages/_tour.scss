@@ -14,15 +14,29 @@
     font-size: 4.8rem;
     font-weight: 400;
     margin-right: 4rem;
+    @include respond(tab-port) {
+      margin-right: 3rem;
+    }
+  }
+  &-container {
+    @include respond(tab-land) {
+      padding: 0 2rem;
+    }
   }
   &__day {
     margin-right: 9rem;
+    @include respond(tab-port) {
+      margin-right: 5rem;
+    }
   }
   &__name {
     font-weight: 600;
     font-size: 2.4rem;
     margin-right: auto;
     cursor: pointer;
+    @include respond(phone) {
+      @include truncate-text(15rem);
+    }
   }
   &__action {
     text-decoration: none;

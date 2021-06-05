@@ -1,0 +1,82 @@
+.album {
+  display: flex;
+  align-items: center;
+  @include respond(phone) {
+    display: block;
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  &__img {
+    height: 65vh;
+    width: 30vw;
+
+    @include respond(tab-land) {
+      width: 45vw;
+    }
+    @include respond(tab-port) {
+      width: 40vw;
+      height: 60vh;
+    }
+    @include respond(phone) {
+      display: block;
+      width: 90vw;
+      margin-bottom: 5rem;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__contents {
+    margin-left: 5vw;
+    flex: 1;
+    @include respond(phone) {
+      margin-left: 0;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 1.7rem;
+    }
+  }
+  &__name {
+    margin-right: auto;
+    text-decoration: none;
+    color: $gray-5;
+    font-weight: 600;
+    span {
+      color: $gray-3;
+      margin-right: 2rem;
+    }
+    @include respond(tab-port) {
+      @include truncate-text(18rem);
+    }
+  }
+  &__duration {
+    color: $gray-3;
+  }
+  &__play {
+    margin-left: 3rem;
+    color: $gray-5;
+    border: 1px solid $gray-5;
+    border-radius: 50%;
+    padding-left: 2px;
+    padding-right: 3px;
+    font-size: 1.4rem;
+    i {
+      margin-left: 3px;
+    }
+    &-pause {
+      i {
+        margin-left: 0 !important;
+        padding: 0;
+        padding: 0 2px;
+      }
+    }
+  }
+}

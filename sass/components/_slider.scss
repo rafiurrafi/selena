@@ -7,5 +7,16 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    @include respond(tab-port) {
+      margin-left: 2rem;
+      span {
+        color: $gray-1;
+      }
+    }
+    .heading-primary {
+      @include respond(phone) {
+        color: $gray-1;
+      }
+    }
   }
 }
