@@ -1,5 +1,5 @@
 .header {
-  height: 9rem;
+  height: $header-height;
   &__content {
     display: flex;
     justify-content: space-between;

@@ -5,6 +5,10 @@
   &--train &__text {
     margin-left: 3rem;
   }
+  &--level &__text,
+  &--level .heading-secondary {
+    display: inline-block;
+  }
   &__text {
     font-style: 1.6rem;
     font-weight: 600;

@@ -1,0 +1,78 @@
+.contact-parallex {
+  background-image: url(../../img/Extra/hero-slide-2-concert.png);
+}
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding: 10rem 0;
+  grid-gap: 4rem;
+  @include respond(phone) {
+    width: 50%;
+  }
+  @include respond(tab-port) {
+    width: 70%;
+    margin: 0 auto;
+  }
+  // @include respond(tab-land) {
+  //   width: 80%;
+  //   margin: 0 auto;
+  // }
+
+  &__content {
+    p {
+      color: $gray-3;
+    }
+  }
+}
+.section-contact-form {
+  padding: 10rem 0;
+}
+.contact-form {
+  display: flex;
+  @include respond(tab-port) {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  &__desc {
+    flex: 40%;
+    margin-right: 10%;
+  }
+  &__main {
+    flex: 50%;
+    @include respond(tab-port) {
+      margin-top: 10rem;
+    }
+    input,
+    textarea {
+      width: 90%;
+      margin: 0 auto;
+      display: block;
+      font-size: 1.8rem;
+      color: $gray-5;
+      border: 1px solid $gray-5;
+      padding: 1rem 3rem;
+      margin-bottom: 2rem;
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
+    button {
+      margin-left: auto;
+      margin-right: 5%;
+      font-size: 1.8rem;
+      background-color: $gray-5;
+      color: $gray-1;
+      padding: 1rem 2rem;
+      display: block;
+    }
+  }
+  &__more {
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: 1.5rem;
+      color: $gray-3;
+    }
+  }
+}

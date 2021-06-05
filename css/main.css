@@ -200,6 +200,11 @@ body {
   color: #8a8a8a;
 }
 
+.heading-tetra--fat {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
 .heading-tetra--footer {
   color: #fbfbfb;
   font-weight: 600;
@@ -235,6 +240,13 @@ body {
 .app-button__ios img, .app-button__android img {
   height: 100%;
   display: inline-block;
+}
+
+.parallex {
+  height: calc(100vh - 9rem);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
 }
 
 .slider__img {
@@ -273,6 +285,10 @@ body {
   margin-left: 1.5rem;
 }
 
+.socials--dark a {
+  color: #1a1a1a;
+}
+
 .title--train {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,6 +297,11 @@ body {
 
 .title--train .title__text {
   margin-left: 3rem;
+}
+
+.title--level .title__text,
+.title--level .heading-secondary {
+  display: inline-block;
 }
 
 .title__text {
@@ -560,9 +581,9 @@ body {
 @media (max-width: 56.25em) {
   .footer__bottom {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -747,6 +768,162 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10rem 0;
+}
+
+.about__img {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  margin-right: 5%;
+}
+
+@media (max-width: 56.25em) {
+  .about__img {
+    margin-right: 0;
+    margin-bottom: 8rem;
+  }
+}
+
+.about__img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about__content {
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+}
+
+.about__content-main p:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 56.25em) {
+  .about {
+    display: block;
+    width: 80vw;
+    margin: auto;
+    margin-bottom: 10rem;
+  }
+}
+
+.contact-parallex {
+  background-image: url(../../img/Extra/hero-slide-2-concert.png);
+}
+
+.contact-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding: 10rem 0;
+  grid-gap: 4rem;
+}
+
+@media (max-width: 37.5em) {
+  .contact-info {
+    width: 50%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .contact-info {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.contact-info__content p {
+  color: #8a8a8a;
+}
+
+.section-contact-form {
+  padding: 10rem 0;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 56.25em) {
+  .contact-form {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.contact-form__desc {
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
+  margin-right: 10%;
+}
+
+.contact-form__main {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+@media (max-width: 56.25em) {
+  .contact-form__main {
+    margin-top: 10rem;
+  }
+}
+
+.contact-form__main input,
+.contact-form__main textarea {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  padding: 1rem 3rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 56.25em) {
+  .contact-form__main input,
+  .contact-form__main textarea {
+    width: 100%;
+  }
+}
+
+.contact-form__main button {
+  margin-left: auto;
+  margin-right: 5%;
+  font-size: 1.8rem;
+  background-color: #1a1a1a;
+  color: #fbfbfb;
+  padding: 1rem 2rem;
+  display: block;
+}
+
+.contact-form__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-form__more p {
+  font-size: 1.5rem;
+  color: #8a8a8a;
 }
 
 .section-slider {

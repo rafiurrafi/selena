@@ -6,4 +6,9 @@
       margin-left: 1.5rem;
     }
   }
+  &--dark {
+    a {
+      color: $gray-5;
+    }
+  }
 }

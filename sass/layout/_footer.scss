@@ -82,7 +82,7 @@
     align-items: center;
     z-index: 4;
     @include respond(tab-port) {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: flex-start;
       width: 70%;
       margin: 0 auto;

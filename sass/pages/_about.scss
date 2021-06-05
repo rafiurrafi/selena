@@ -1,0 +1,33 @@
+.about {
+  display: flex;
+  margin: 10rem 0;
+  &__img {
+    flex: 50%;
+    margin-right: 5%;
+    @include respond(tab-port) {
+      margin-right: 0;
+
+      margin-bottom: 8rem;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    flex: 45%;
+    &-main {
+      p {
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+  @include respond(tab-port) {
+    display: block;
+    width: 80vw;
+    margin: auto;
+    margin-bottom: 10rem;
+  }
+}
