@@ -9,6 +9,15 @@
   line-height: 1.15;
   color: $gray-5;
   @include red-indicator;
+  &-s {
+    span {
+      font-size: 4rem;
+      // margin-left: 0.3rem;
+      display: inline-block;
+      color: $color-primary !important;
+      margin-top: 3px;
+    }
+  }
   &::after {
     bottom: 1.2rem;
   }

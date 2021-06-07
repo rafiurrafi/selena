@@ -1,5 +1,6 @@
 .header {
   height: $header-height;
+  position: relative;
   &__content {
     display: flex;
     justify-content: space-between;
@@ -34,5 +35,34 @@
   }
   &__side-nav {
     @extend %nav-style;
+    @include respond(phone) {
+      display: none;
+    }
   }
+  &__humbergar {
+    display: none;
+    @include respond(phone) {
+      display: block;
+    }
+  }
+  &-mini-nav {
+    position: absolute;
+    background-color: $gray-2;
+    height: 0;
+    width: 100%;
+    // z-index: -11;
+    // transition: all 0.5s;
+    @extend %nav-style;
+    li {
+      display: block !important;
+      margin-left: 2.5rem;
+    }
+    &.active {
+      z-index: 1;
+      height: 100%;
+    }
+  }
+}
+@include respond(phone) {
+  display: block;
 }

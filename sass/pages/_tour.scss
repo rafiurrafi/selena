@@ -1,49 +1,39 @@
-.tour {
+.tour-parallex {
+  background-image: url(../../img/hero/selena-gomez-concert-sleep-train-arena.jpg);
+}
+.tour-main {
+  padding: 10rem 0;
+}
+.tour-content {
   display: flex;
-  align-items: center;
-  &:not(:last-child) {
-    margin-bottom: 1rem;
+  justify-content: space-around;
+
+  @include respond(tab-port) {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
   }
-  &--faded {
-    color: $gray-3;
+  @include respond(phone) {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
   }
-  &__ticket-sold {
-    color: $color-primary;
-  }
-  &__date {
-    font-size: 4.8rem;
-    font-weight: 400;
-    margin-right: 4rem;
+
+  &__desc {
+    flex: 0 0 50%;
+    margin-right: 5%;
     @include respond(tab-port) {
-      margin-right: 3rem;
+      margin-bottom: 8rem;
     }
   }
-  &-container {
-    @include respond(tab-land) {
-      padding: 0 2rem;
-    }
-  }
-  &__day {
-    margin-right: 9rem;
-    @include respond(tab-port) {
-      margin-right: 5rem;
-    }
-  }
-  &__name {
-    font-weight: 600;
-    font-size: 2.4rem;
-    margin-right: auto;
-    cursor: pointer;
-    @include respond(phone) {
-      @include truncate-text(15rem);
-    }
-  }
-  &__action {
-    text-decoration: none;
-    color: $gray-5;
-    i {
-      margin-left: 2rem;
-      color: $color-primary;
+  &__address {
+    & > div {
+      // margin-bottom: 0.7rem;
+      color: $gray-3;
+      font-size: 1.6rem;
+      span {
+        font-weight: 600;
+      }
     }
   }
 }

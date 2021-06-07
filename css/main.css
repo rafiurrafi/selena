@@ -40,31 +40,31 @@
   font-weight: 900;
 }
 
-.header__main-nav ul, .header__side-nav ul {
+.header__main-nav ul, .header__side-nav ul, .header-mini-nav ul {
   list-style: none;
 }
 
-.header__main-nav ul li, .header__side-nav ul li {
+.header__main-nav ul li, .header__side-nav ul li, .header-mini-nav ul li {
   display: inline-block;
 }
 
-.header__main-nav ul li:not(:first-child), .header__side-nav ul li:not(:first-child) {
+.header__main-nav ul li:not(:first-child), .header__side-nav ul li:not(:first-child), .header-mini-nav ul li:not(:first-child) {
   margin-left: 2.5rem;
 }
 
-.header__main-nav ul li a:link, .header__side-nav ul li a:link, .header__main-nav ul li a:visited, .header__side-nav ul li a:visited {
+.header__main-nav ul li a:link, .header__side-nav ul li a:link, .header-mini-nav ul li a:link, .header__main-nav ul li a:visited, .header__side-nav ul li a:visited, .header-mini-nav ul li a:visited {
   text-decoration: none;
   color: #1a1a1a;
   font-weight: 500;
 }
 
-.header__main-nav ul li a:hover, .header__side-nav ul li a:hover {
+.header__main-nav ul li a:hover, .header__side-nav ul li a:hover, .header-mini-nav ul li a:hover {
   position: relative;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-.header__main-nav ul li a:hover::after, .header__side-nav ul li a:hover::after {
+.header__main-nav ul li a:hover::after, .header__side-nav ul li a:hover::after, .header-mini-nav ul li a:hover::after {
   content: "";
   display: inline-block;
   height: 0.7rem;
@@ -76,13 +76,13 @@
   bottom: 0.5rem;
 }
 
-.header__main-nav ul li a.active, .header__side-nav ul li a.active {
+.header__main-nav ul li a.active, .header__side-nav ul li a.active, .header-mini-nav ul li a.active {
   position: relative;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-.header__main-nav ul li a.active::after, .header__side-nav ul li a.active::after {
+.header__main-nav ul li a.active::after, .header__side-nav ul li a.active::after, .header-mini-nav ul li a.active::after {
   content: "";
   display: inline-block;
   height: 0.7rem;
@@ -164,6 +164,13 @@ body {
   bottom: 0.5rem;
 }
 
+.heading-secondary-s span {
+  font-size: 4rem;
+  display: inline-block;
+  color: #ff5850 !important;
+  margin-top: 3px;
+}
+
 .heading-secondary::after {
   bottom: 1.2rem;
 }
@@ -226,6 +233,10 @@ body {
   margin-bottom: 10rem;
 }
 
+.u-text-gray {
+  color: #8a8a8a;
+}
+
 .app-button > *:first-child {
   margin-right: 2rem;
   -webkit-transform: translateY(-3px);
@@ -286,7 +297,7 @@ body {
 }
 
 .socials--dark a {
-  color: #1a1a1a;
+  color: #8a8a8a;
 }
 
 .title--train {
@@ -662,6 +673,7 @@ body {
 
 .header {
   height: 9rem;
+  position: relative;
 }
 
 .header__content {
@@ -728,6 +740,43 @@ body {
   }
 }
 
+@media (max-width: 37.5em) {
+  .header__side-nav {
+    display: none;
+  }
+}
+
+.header__humbergar {
+  display: none;
+}
+
+@media (max-width: 37.5em) {
+  .header__humbergar {
+    display: block;
+  }
+}
+
+.header-mini-nav {
+  position: absolute;
+  background-color: #dadada;
+  height: 0;
+  width: 100%;
+}
+
+.header-mini-nav li {
+  display: block !important;
+  margin-left: 2.5rem;
+}
+
+.header-mini-nav.active {
+  z-index: 1;
+  height: 100%;
+}
+
+@media (max-width: 37.5em) {
+  display: block;
+}
+
 .section-merch img {
   height: 25rem;
   -o-object-fit: cover;
@@ -745,6 +794,81 @@ body {
 .music img {
   width: 100%;
   display: block;
+}
+
+.tour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tour:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.tour--faded {
+  color: #8a8a8a;
+}
+
+.tour__ticket-sold {
+  color: #ff5850;
+}
+
+.tour__date {
+  font-size: 4.8rem;
+  font-weight: 400;
+  margin-right: 4rem;
+}
+
+@media (max-width: 56.25em) {
+  .tour__date {
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 71.25em) {
+  .tour-container {
+    padding: 0 2rem;
+  }
+}
+
+.tour__day {
+  margin-right: 9rem;
+}
+
+@media (max-width: 56.25em) {
+  .tour__day {
+    margin-right: 5rem;
+  }
+}
+
+.tour__name {
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 37.5em) {
+  .tour__name {
+    width: 15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.tour__action {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.tour__action i {
+  margin-left: 2rem;
+  color: #ff5850;
 }
 
 .video {
@@ -1013,78 +1137,57 @@ body {
   }
 }
 
-.tour {
+.tour-parallex {
+  background-image: url(../../img/hero/selena-gomez-concert-sleep-train-arena.jpg);
+}
+
+.tour-main {
+  padding: 10rem 0;
+}
+
+.tour-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.tour:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.tour--faded {
-  color: #8a8a8a;
-}
-
-.tour__ticket-sold {
-  color: #ff5850;
-}
-
-.tour__date {
-  font-size: 4.8rem;
-  font-weight: 400;
-  margin-right: 4rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media (max-width: 56.25em) {
-  .tour__date {
-    margin-right: 3rem;
+  .tour-content {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
   }
-}
-
-@media (max-width: 71.25em) {
-  .tour-container {
-    padding: 0 2rem;
-  }
-}
-
-.tour__day {
-  margin-right: 9rem;
-}
-
-@media (max-width: 56.25em) {
-  .tour__day {
-    margin-right: 5rem;
-  }
-}
-
-.tour__name {
-  font-weight: 600;
-  font-size: 2.4rem;
-  margin-right: auto;
-  cursor: pointer;
 }
 
 @media (max-width: 37.5em) {
-  .tour__name {
-    width: 15rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .tour-content {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
-.tour__action {
-  text-decoration: none;
-  color: #1a1a1a;
+.tour-content__desc {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  margin-right: 5%;
 }
 
-.tour__action i {
-  margin-left: 2rem;
-  color: #ff5850;
+@media (max-width: 56.25em) {
+  .tour-content__desc {
+    margin-bottom: 8rem;
+  }
+}
+
+.tour-content__address > div {
+  color: #8a8a8a;
+  font-size: 1.6rem;
+}
+
+.tour-content__address > div span {
+  font-weight: 600;
 }
 /*# sourceMappingURL=main.css.map */

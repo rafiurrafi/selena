@@ -1,0 +1,49 @@
+.tour {
+  display: flex;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  &--faded {
+    color: $gray-3;
+  }
+  &__ticket-sold {
+    color: $color-primary;
+  }
+  &__date {
+    font-size: 4.8rem;
+    font-weight: 400;
+    margin-right: 4rem;
+    @include respond(tab-port) {
+      margin-right: 3rem;
+    }
+  }
+  &-container {
+    @include respond(tab-land) {
+      padding: 0 2rem;
+    }
+  }
+  &__day {
+    margin-right: 9rem;
+    @include respond(tab-port) {
+      margin-right: 5rem;
+    }
+  }
+  &__name {
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin-right: auto;
+    cursor: pointer;
+    @include respond(phone) {
+      @include truncate-text(15rem);
+    }
+  }
+  &__action {
+    text-decoration: none;
+    color: $gray-5;
+    i {
+      margin-left: 2rem;
+      color: $color-primary;
+    }
+  }
+}
