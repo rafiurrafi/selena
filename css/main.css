@@ -819,7 +819,7 @@ body {
 }
 
 .music img:hover {
-  opacity: 0.7;
+  opacity: 0.5;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -848,7 +848,6 @@ body {
   display: block;
   text-decoration: none;
   color: #fff;
-  background-color: #8a8a8a;
   text-align: center;
   width: 100%;
   text-align: center;
@@ -856,12 +855,14 @@ body {
   position: absolute;
   left: 0;
   bottom: -100%;
-  -webkit-transition: bottom 0.3s;
-  transition: bottom 0.3s;
+  opacity: 0;
+  -webkit-transition: bottom 0.3s, opacity 0.4s;
+  transition: bottom 0.3s, opacity 0.4s;
 }
 
 .music:hover .music__name {
   bottom: 0;
+  opacity: 1;
 }
 
 @media (max-width: 350px) {
