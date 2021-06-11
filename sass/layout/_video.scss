@@ -14,5 +14,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all 0.4s;
+  }
+  &:hover &__img-2 {
+    height: 7rem;
+    width: 7rem;
   }
 }

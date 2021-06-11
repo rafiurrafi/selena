@@ -1,9 +1,21 @@
 .title {
   &--train {
     display: flex;
+    @include respond(phone) {
+      display: block;
+    }
+    .heading-secondary {
+      @include respond(phone) {
+        margin-bottom: 1rem;
+      }
+    }
   }
   &--train &__text {
     margin-left: 3rem;
+    @include respond(phone) {
+      margin-left: 0;
+      display: inline-block;
+    }
   }
   &--level &__text,
   &--level .heading-secondary {

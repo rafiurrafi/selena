@@ -29,6 +29,7 @@
       object-fit: cover;
     }
   }
+
   &__contents {
     margin-left: 5vw;
     flex: 1;
@@ -59,6 +60,9 @@
   }
   &__duration {
     color: $gray-3;
+    @include respond(phone) {
+      display: none;
+    }
   }
   &__play {
     margin-left: 3rem;
@@ -72,6 +76,8 @@
       margin-left: 3px;
     }
     &-pause {
+      color: $color-primary;
+      border: 1px solid $color-primary;
       i {
         margin-left: 0 !important;
         padding: 0;

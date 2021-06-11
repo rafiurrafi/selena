@@ -25,11 +25,11 @@
         <nav class="header__main-nav">
           <ul>
             <li><a class="active" href="">Home</a></li>
-            <li><a href="">Music</a></li>
-            <li><a href="">Album</a></li>
-            <li><a href="">Tour</a></li>
-            <li><a href="">Video</a></li>
-            <li><a href="">Merch</a></li>
+            <li><a href="#home-music">Music</a></li>
+            <li><a href="#home-album">Album</a></li>
+            <li><a href="#home-tour">Tour</a></li>
+            <li><a href="#home-video">Video</a></li>
+            <li><a href="#home-merch">Merch</a></li>
           </ul>
         </nav>
         <nav class="header__side-nav">
@@ -69,10 +69,10 @@
         </div>
       </div>
     </section>
-    <section class="section-album">
+    <section class="section-album" id="home-album">
       <div class="row">
         <div class="title title--train u-mb-lg">
-          <h2 class="heading-secondary">Album</h2>
+          <h2 class="heading-secondary">Album<span>.</span></h2>
           <p class="title__text">
             Exclusive songs <br />
             from latest release
@@ -88,6 +88,7 @@
               <a href="#" class="album__name"
                 ><span>01</span>The Heart Wants What It Wants</a
               >
+              <div class="album__break"></div>
               <div class="album__duration">4 : 10</div>
               <a href="#" class="album__play album__play-pause"
                 ><i class="fa fa-pause"></i
@@ -158,10 +159,10 @@
         </div>
       </div>
     </section>
-    <section class="section-music">
+    <section class="section-music" id="home-music">
       <div class="row">
         <div class="title title--train u-mb-lg">
-          <h2 class="heading-secondary">Album</h2>
+          <h2 class="heading-secondary">Music</h2>
           <p class="title__text">
             The Music tuned <br />
             by million hearts
@@ -171,6 +172,10 @@
         <div class="music-container">
           <div class="music">
             <img src="img/Music-covers/music-1.jpg" alt="" />
+            <div class="music__name">
+              <p>Album name</p>
+              <h4 class="heading-tetra">Song name</h4>
+            </div>
           </div>
           <div class="music">
             <img src="img/Music-covers/music-2.jpg" alt="" />
@@ -196,10 +201,11 @@
         </div>
       </div>
     </section>
-    <section class="section-tours">
+    <section class="section-tours" id="home-tour">
       <div class="row">
         <div class="title title--train u-mb-lg">
-          <h2 class="heading-secondary">Tours</h2>
+          <!-- <h2 class="heading-secondary">Tours</h2> -->
+          <h2 class="heading-secondary">Tours<span>.</span></h2>
           <p class="title__text">
             The Music tuned <br />
             by million hearts
@@ -207,68 +213,97 @@
         </div>
         <div class="tour-container">
           <div class="tour tour--faded">
-            <div class="tour__date">10</div>
-            <div class="tour__day">Jan <br />Sat</div>
-            <div class="tour__name">
-              California , USA - World Music Festival
+            <div class="tour__time">
+              <div class="tour__date">10</div>
+              <div class="tour__day">Jan <br />Sat</div>
             </div>
-            <div class="tour__ticket-sold">Sold out</div>
+            <div class="tour__sell">
+              <div class="tour__name">
+                California , USA - World Music Festival
+              </div>
+              <div class="tour__ticket-sold">Sold out</div>
+            </div>
           </div>
           <div class="tour">
-            <div class="tour__date">10</div>
-            <div class="tour__day">Jan <br />Sat</div>
-            <div class="tour__name">Sheffield, UK – Tramlines</div>
-            <a href="#" class="tour__action"
-              >Buy Ticket <i class="fa fa-arrow-right"></i
-            ></a>
+            <div class="tour__time">
+              <div class="tour__date">10</div>
+              <div class="tour__day">Jan <br />Sat</div>
+            </div>
+            <div class="tour__sell">
+              <div class="tour__name">Sheffield, UK – Tramlines</div>
+              <a href="#" class="tour__action"
+                >Buy Ticket <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
           <div class="tour">
-            <div class="tour__date">21</div>
-            <div class="tour__day">Jan <br />Sat</div>
-            <div class="tour__name">Kostrzyn, Poland – Woodstock</div>
-            <a href="#" class="tour__action"
-              >Buy Ticket <i class="fa fa-arrow-right"></i
-            ></a>
+            <div class="tour__time">
+              <div class="tour__date">21</div>
+              <div class="tour__day">Jan <br />Sat</div>
+            </div>
+            <div class="tour__sell">
+              <div class="tour__name">Kostrzyn, Poland – Woodstock</div>
+              <a href="#" class="tour__action"
+                >Buy Ticket <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
           <div class="tour">
-            <div class="tour__date">14</div>
-            <div class="tour__day">Jan <br />Sat</div>
-            <div class="tour__name">Sheffield, UK – Tramlines</div>
-            <a href="#" class="tour__action"
-              >Buy Ticket <i class="fa fa-arrow-right"></i
-            ></a>
+            <div class="tour__time">
+              <div class="tour__date">14</div>
+              <div class="tour__day">Jan <br />Sat</div>
+            </div>
+            <div class="tour__sell">
+              <div class="tour__name">Sheffield, UK – Tramlines</div>
+              <a href="#" class="tour__action"
+                >Buy Ticket <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
           <div class="tour">
-            <div class="tour__date">07</div>
-            <div class="tour__day">Jan <br />Sat</div>
-            <div class="tour__name">Glastonbury, UK – Glastonbury</div>
-            <a href="#" class="tour__action"
-              >Buy Ticket <i class="fa fa-arrow-right"></i
-            ></a>
+            <div class="tour__time">
+              <div class="tour__date">07</div>
+              <div class="tour__day">Jan <br />Sat</div>
+            </div>
+            <div class="tour__sell">
+              <div class="tour__name">Glastonbury, UK – Glastonbury</div>
+              <a href="#" class="tour__action"
+                >Buy Ticket <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
           <div class="tour">
-            <div class="tour__date">10</div>
-            <div class="tour__day">Jan <br />Sat</div>
-            <div class="tour__name">Sheffield, UK – Tramlines</div>
-            <a href="#" class="tour__action"
-              >Buy Ticket <i class="fa fa-arrow-right"></i
-            ></a>
+            <div class="tour__time">
+              <div class="tour__date">10</div>
+              <div class="tour__day">Jan <br />Sat</div>
+            </div>
+            <div class="tour__sell">
+              <div class="tour__name">Sheffield, UK – Tramlines</div>
+              <a href="#" class="tour__action"
+                >Buy Ticket <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
           <div class="tour">
-            <div class="tour__date">10</div>
-            <div class="tour__day">Jan <br />Sat</div>
-            <div class="tour__name">Sheffield, UK – Tramlines</div>
-            <a href="#" class="tour__action"
-              >Buy Ticket <i class="fa fa-arrow-right"></i
-            ></a>
+            <div class="tour__time">
+              <div class="tour__date">10</div>
+              <div class="tour__day">Jan <br />Sat</div>
+            </div>
+            <div class="tour__sell">
+              <div class="tour__name">Sheffield, UK – Tramlines</div>
+              <a href="#" class="tour__action"
+                >Buy Ticket <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section-video">
+    <section class="section-video" id="home-video">
       <div class="row">
         <div class="title title--train u-mb-lg">
-          <h2 class="heading-secondary">Video</h2>
+          <!-- <h2 class="heading-secondary">Video</h2> -->
+          <h2 class="heading-secondary">Video<span>.</span></h2>
           <p class="title__text">
             The Music tuned <br />
             by million hearts
@@ -280,10 +315,11 @@
         </div>
       </div>
     </section>
-    <section class="section-merch">
+    <section class="section-merch" id="home-merch">
       <div class="row">
         <div class="title title--train u-mb-lg">
-          <h2 class="heading-secondary">Merch</h2>
+          <!-- <h2 class="heading-secondary">Merch</h2> -->
+          <h2 class="heading-secondary">Merch<span>.</span></h2>
           <p class="title__text">
             The Music tuned <br />
             by million hearts
@@ -292,27 +328,35 @@
         <div class="music-container">
           <div class="music">
             <img src="img/merch/merch-1.jpg" alt="" />
+            <a href="#" class="music__cart">Add to cart</a>
           </div>
           <div class="music">
             <img src="img/merch/merch-2.jpg" alt="" />
+            <a href="#" class="music__cart">Add to cart</a>
           </div>
           <div class="music">
             <img src="img/merch/merch-3.jpg" alt="" />
+            <a href="#" class="music__cart">Add to cart</a>
           </div>
           <div class="music">
             <img src="img/merch/merch-4.jpg" alt="" />
+            <a href="#" class="music__cart">Add to cart</a>
           </div>
           <div class="music">
             <img src="img/merch/merch-5.jpg" alt="" />
+            <a href="#" class="music__cart">Add to cart</a>
           </div>
           <div class="music">
             <img src="img/merch/merch-6.jpg" alt="" />
+            <a href="#" class="music__cart">Add to cart</a>
           </div>
           <div class="music">
             <img src="img/merch/merch-7.jpg" alt="" />
+            <a href="#" class="music__cart">Add to cart</a>
           </div>
           <div class="music">
             <img src="img/merch/merch-8.jpg" alt="" />
+            <a href="#" class="music__cart">Add to cart</a>
           </div>
         </div>
       </div>
@@ -374,5 +418,7 @@
       </div>
     </footer>
   </body>
+  <script src="js/jquery.min-2.2.4.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/app.js"></script>
 </html>

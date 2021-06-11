@@ -1,6 +1,9 @@
 .tour {
   display: flex;
   align-items: center;
+  @include respond(phone) {
+    display: block;
+  }
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
@@ -9,6 +12,15 @@
   }
   &__ticket-sold {
     color: $color-primary;
+  }
+  &__time,
+  &__sell {
+    display: flex;
+    align-items: center;
+  }
+  &__sell {
+    flex: 1;
+    justify-content: space-between;
   }
   &__date {
     font-size: 4.8rem;

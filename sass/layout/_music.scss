@@ -4,8 +4,61 @@
   grid-gap: 4rem;
 }
 .music {
+  position: relative;
+  overflow: hidden;
+  background-color: $color-dark;
   img {
     width: 100%;
     display: block;
+    transition: all 0.5s;
+    &:hover {
+      opacity: 0.7;
+      transform: scale(1.1);
+    }
+  }
+  &__cart {
+    &:link,
+    &:visited {
+      display: block;
+      text-decoration: none;
+      color: $color-white;
+      background-color: $gray-5;
+      text-align: center;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 2rem;
+      position: absolute;
+      left: 0;
+      bottom: -100%;
+      transition: bottom 0.3s;
+    }
+  }
+  &:hover &__cart {
+    bottom: 0;
+  }
+  &__name {
+    display: block;
+    text-decoration: none;
+    color: $color-white;
+    background-color: $gray-3;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    transition: bottom 0.3s;
+  }
+  &:hover &__name {
+    bottom: 0;
+  }
+  @media (max-width: 350px) {
+    &:not(:first-child) {
+      display: none;
+    }
+    &:nth-child(2) {
+      display: block;
+    }
   }
 }

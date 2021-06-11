@@ -136,6 +136,12 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 1023px) {
+  .row {
+    padding: 0 2%;
+  }
+}
+
 .heading-primary {
   font-size: 6rem;
   line-height: 1.125;
@@ -147,32 +153,14 @@ body {
   font-size: 4.8rem;
   line-height: 1.15;
   color: #1a1a1a;
-  position: relative;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
 }
 
-.heading-secondary::after {
-  content: "";
-  display: inline-block;
-  height: 0.7rem;
-  width: 0.7rem;
-  border-radius: 50%;
-  background-color: #ff5850;
-  position: absolute;
-  right: -1rem;
-  bottom: 0.5rem;
-}
-
-.heading-secondary-s span {
+.heading-secondary span {
   font-size: 4rem;
   display: inline-block;
   color: #ff5850 !important;
   margin-top: 3px;
-}
-
-.heading-secondary::after {
-  bottom: 1.2rem;
+  margin-left: 3px;
 }
 
 .heading-tertiary {
@@ -306,8 +294,27 @@ body {
   display: flex;
 }
 
+@media (max-width: 37.5em) {
+  .title--train {
+    display: block;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .title--train .heading-secondary {
+    margin-bottom: 1rem;
+  }
+}
+
 .title--train .title__text {
   margin-left: 3rem;
+}
+
+@media (max-width: 37.5em) {
+  .title--train .title__text {
+    margin-left: 0;
+    display: inline-block;
+  }
 }
 
 .title--level .title__text,
@@ -434,6 +441,12 @@ body {
   color: #8a8a8a;
 }
 
+@media (max-width: 37.5em) {
+  .album__duration {
+    display: none;
+  }
+}
+
 .album__play {
   margin-left: 3rem;
   color: #1a1a1a;
@@ -446,6 +459,11 @@ body {
 
 .album__play i {
   margin-left: 3px;
+}
+
+.album__play-pause {
+  color: #ff5850;
+  border: 1px solid #ff5850;
 }
 
 .album__play-pause i {
@@ -773,10 +791,6 @@ body {
   height: 100%;
 }
 
-@media (max-width: 37.5em) {
-  display: block;
-}
-
 .section-merch img {
   height: 25rem;
   -o-object-fit: cover;
@@ -791,9 +805,72 @@ body {
   grid-gap: 4rem;
 }
 
+.music {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
 .music img {
   width: 100%;
   display: block;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.music img:hover {
+  opacity: 0.7;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.music__cart:link, .music__cart:visited {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1a1a1a;
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 2rem;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  -webkit-transition: bottom 0.3s;
+  transition: bottom 0.3s;
+}
+
+.music:hover .music__cart {
+  bottom: 0;
+}
+
+.music__name {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #8a8a8a;
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 2rem;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  -webkit-transition: bottom 0.3s;
+  transition: bottom 0.3s;
+}
+
+.music:hover .music__name {
+  bottom: 0;
+}
+
+@media (max-width: 350px) {
+  .music:not(:first-child) {
+    display: none;
+  }
+  .music:nth-child(2) {
+    display: block;
+  }
 }
 
 .tour {
@@ -803,6 +880,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 37.5em) {
+  .tour {
+    display: block;
+  }
 }
 
 .tour:not(:last-child) {
@@ -815,6 +898,24 @@ body {
 
 .tour__ticket-sold {
   color: #ff5850;
+}
+
+.tour__time, .tour__sell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tour__sell {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .tour__date {
@@ -892,6 +993,13 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.video:hover .video__img-2 {
+  height: 7rem;
+  width: 7rem;
 }
 
 .about {
