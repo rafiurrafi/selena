@@ -42,7 +42,7 @@
   &__humbergar {
     display: none;
     @include respond(phone) {
-      display: block;
+      display: flex;
     }
   }
   &-mini-nav {
