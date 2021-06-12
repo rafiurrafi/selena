@@ -4,7 +4,8 @@
   @include respond(phone) {
     display: block;
     width: 90vw;
-    margin-left: 5vw;
+    // margin-left: 5vw;
+    margin: 0 auto;
   }
 
   &__img {
@@ -40,9 +41,15 @@
   &__content {
     display: flex;
     align-items: center;
+    transition: all 0.3s;
 
     &:not(:last-child) {
       margin-bottom: 1.7rem;
+    }
+    &:hover {
+      .album__name {
+        color: $gray-3 !important;
+      }
     }
   }
   &__name {

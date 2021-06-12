@@ -1,6 +1,7 @@
 .tour {
   display: flex;
   align-items: center;
+  transition: color 0.3s;
   @include respond(phone) {
     display: block;
   }
@@ -53,9 +54,22 @@
   &__action {
     text-decoration: none;
     color: $gray-5;
+    transition: all 0.3s;
     i {
-      margin-left: 2rem;
+      margin-left: 1.5rem;
       color: $color-primary;
+      transition: all 0.3s;
     }
+    &:hover {
+      color: $color-primary;
+      i {
+        margin-left: 2rem;
+        margin-right: -3px;
+        // color: $color-secondary;
+      }
+    }
+  }
+  &:hover {
+    color: $gray-3 !important;
   }
 }

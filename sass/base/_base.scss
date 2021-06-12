@@ -35,3 +35,27 @@ body {
     padding: 0 2%;
   }
 }
+
+// ======================================
+// Animations
+// =====================================
+.section-album .title .heading-secondary,
+.section-album .title p,
+.section-music .title .heading-secondary,
+.section-music .title p,
+.section-video .title .heading-secondary,
+.section-video .title p,
+.section-merch .title .heading-secondary,
+.section-merch .title p {
+  opacity: 0;
+}
+.section-album .title .heading-secondary.animate__animated,
+.section-album .title p.animate__animated,
+.section-music .title .heading-secondary.animate__animated,
+.section-music .title p.animate__animated,
+.section-video .title .heading-secondary.animate__animated,
+.section-video .title p.animate__animated,
+.section-merch .title .heading-secondary.animate__animated,
+.section-merch .title p.animate__animated {
+  opacity: 1;
+}

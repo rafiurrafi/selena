@@ -51,7 +51,7 @@
     height: 0;
     width: 100%;
     // z-index: -11;
-    // transition: all 0.5s;
+    transition: all 0.5s;
     @extend %nav-style;
     li {
       display: block !important;
